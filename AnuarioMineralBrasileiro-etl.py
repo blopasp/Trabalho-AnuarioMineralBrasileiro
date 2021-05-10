@@ -1,6 +1,6 @@
 def comando(string):
     
-    con = pymysql.connect(host='localhost', user='root', password='1234', db='AnuarioMineralBrasileiro', charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
+    con = pymysql.connect(host='localhost', user='root', password='', db='AnuarioMineralBrasileiro', charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
     
     try:
         with con.cursor() as cursor:
@@ -130,7 +130,7 @@ def carregarDimensoes(arquivo):
 		comando(sql)
 #funcao para carregar dados para a tabela fato
 def carregarFato(arquivo):
-	con = pymysql.connect(host='localhost', user='root', password='1234', db='AnuarioMineralBrasileiro', charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
+	con = pymysql.connect(host='localhost', user='root', password='', db='AnuarioMineralBrasileiro', charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
 
 	with con.cursor() as cursor:
 		for i in range(len(arquivo)):
@@ -180,5 +180,5 @@ if __name__ == '__main__':
     arquivo["Quantidade Contido"] = arquivo["Quantidade Contido"].apply(lambda x: float(x.replace(".","").replace(",",".")))
     arquivo["Quantidade Venda"] = arquivo["Quantidade Venda"].apply(lambda x: float(x.replace(".","").replace(",",".")))
     arquivo["Valor Venda (R$)"] = arquivo["Valor Venda (R$)"].apply(lambda x: float(x.replace(".","").replace(",",".")))
-	#carregarDimensoes(arquivo)
+    carregarDimensoes(arquivo)
     carregarFato(arquivo)
