@@ -5,5 +5,5 @@ Modelagem dimensional de um DW e a produção de indicadores a partir dos dados 
 O dashboard foi feito a partir do software MS Power BI, utilizando uma conexão odbc com o banco de dados mysql. Foram geradas algumas métricas em DAX para criar os indicadores. Os indicadores foram pensados em torno de quantidade produzida, quantidade de venda, e valor de venda, distribuídos em cenário, tais como: vendas por estado, os produtos que mais se destacam, representação temporal das vendas, o quantitativo total dos parâmetros e a distribuicao das vendas por regiao.
 
 Autores:
-  Bruno Ximenes
+
   Pablo Andreson
